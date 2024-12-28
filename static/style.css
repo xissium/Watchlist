@@ -5,6 +5,18 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
+/* 提示消息 */
+.alert {
+  position: relative;
+  padding: 7px;
+  margin: 7px 0;
+  border: 1px solid transparent;
+  color: #004085;
+  background-color: #cce5ff;
+  border-color: #b8daff;
+  border-radius: 5px;
+}
+
 /* 头像 */
 .avatar {
   width: 40px;
@@ -33,6 +45,37 @@ nav li a {
 
 nav li a:hover {
   background-color: #111;
+}
+
+/* 覆盖 input 元素的字体 */
+input[type=submit] {
+  font-family: inherit;
+}
+
+input[type=text] {
+  border: 1px solid #ddd;
+}
+
+input[name=year] {
+  width: 50px;
+}
+
+.btn {
+  font-size: 12px;
+  padding: 3px 5px;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 1px solid #555555;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
 }
 
 /* 电影列表 */
