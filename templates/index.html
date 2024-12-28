@@ -5,18 +5,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Watchlist</title>
+  <link rel="icon" href="../static/favicon.ico">
+  <link rel="stylesheet" href="../static/style.css">
 </head>
 
 <body>
-  <h2>My Watchlist</h2>
+  <h2>
+    <img class="avatar" src="../static/images/avatar.png" alt="Avatar">
+    My Watchlist
+  </h2>
+
   <p>{{ movies|length }} Titles</p>
-  <ul>
+  <ul class="movie-list">
     {% for movie in movies %}
     <li>{{ movie.title }} - {{ movie.year }}</li>
     {% endfor %}
   </ul>
+
+  <img class="totoro" src="../static/images/totoro.gif" alt="Walking Totoro">
+
   <footer>
-    <small>&copy; 2024 <a href="http://helloflask.com/book/3">HelloFlask</a></small>
+    <small>&copy; 2018 <a href="http://helloflask.com/book/3">HelloFlask</a></small>
   </footer>
 </body>
 
