@@ -1,32 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Watchlist</title>
-  <link rel="icon" href="../static/favicon.ico">
-  <link rel="stylesheet" href="../static/style.css">
-</head>
-
-<body>
-  <h2>
-    <img class="avatar" src="../static/images/avatar.png" alt="Avatar">
-    {{ user.name }}'s Watchlist
-  </h2>
-
-  <p>{{ movies|length }} Titles</p>
-  <ul class="movie-list">
-    {% for movie in movies %}
-    <li>{{ movie.title }} - {{ movie.year }}</li>
-    {% endfor %}
-  </ul>
-
-  <img class="totoro" src="../static/images/totoro.gif" alt="Walking Totoro">
-
-  <footer>
-    <small>&copy; 2018 <a href="http://helloflask.com/book/3">HelloFlask</a></small>
-  </footer>
-</body>
-
-</html>
+{% block content %}
+<p>{{ movies|length }} Titles</p>
+<ul class="movie-list">
+  {% for movie in movies %}
+  <li>
+    {{ movie.title }} - {{ movie.year }}
+    <span class="float-right">
+      <a class="imdb" href="https://www.imdb.com/find?q={{ movie.title }}" target="_blank"
+        title="Find this movie on IMDb">IMDb</a>
+    </span>
+  </li>
+  {% endfor %}
+</ul>
+<img class="totoro" src="../static/images/totoro.gif" alt="Walking Totoro" title="to~to~ro~">
+{% endblock %}
