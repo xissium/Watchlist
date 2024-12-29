@@ -26,7 +26,13 @@ pip install -r requirements.txt
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://{user}:{password}@{host}[:{port}]/watchlist'
 ```
 
-4. generate fake data then run:
+4. create a database named `watchlist`:
+
+```
+CREATE DATABASE `watchlist` DEFAULT CHARACTER SET utf8mb4;
+```
+
+5. generate fake data then run:
 
 ```
 flask forge
